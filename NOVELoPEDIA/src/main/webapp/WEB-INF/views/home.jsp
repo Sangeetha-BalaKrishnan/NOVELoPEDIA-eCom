@@ -36,7 +36,7 @@
 		<jsp:include page="Shared/header.jsp" />
 		<!-- Carousel -->
 		<div class="content">
-			<div class="container">
+			<div class="container" class="col-lg-14">
 				<div id="myCarousel" class="carousel slide">
 					<!-- Indicators -->
 

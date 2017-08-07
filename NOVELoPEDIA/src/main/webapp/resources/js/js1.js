@@ -4,8 +4,9 @@ $(function() {
 	case 'About Us':
 		$('#About').addClass('active');
 		break;
-	// case 'About Us':
-	// $('#About').addClass('active');
+	case 'Product':
+	 $('#Product').addClass('active');
+	 break;
 	default:
 		$('#home').addClass('active');
 		break;
