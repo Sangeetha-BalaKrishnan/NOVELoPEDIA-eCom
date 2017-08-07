@@ -10,33 +10,14 @@ public class PageController {
 public ModelAndView index()
 { 
 	ModelAndView mvc = new ModelAndView("home");
-	 mvc.addObject("Greetings","Welcome To spring in Web MVC");
+	 mvc.addObject("val","home");
 	return mvc;
 }
-/*@RequestMapping(value="/test")
-public ModelAndView test(@RequestParam(value="Greetings", required=false)String g)
-{	if(g == null)
-{
-	g = "hello there";
-}
-	ModelAndView mvc = new ModelAndView("home");
-	 mvc.addObject("Greetings",g);
+@RequestMapping(value = "/About")
+public ModelAndView about()
+{ 
+	ModelAndView mvc = new ModelAndView("About");
+	mvc.addObject("val","About Us");
 	return mvc;
-
-	
 }
-
-@RequestMapping(value="/test/{Greetings}")
-public ModelAndView test(@PathVariable("Greetings")String glu)
-{	if(glu == null)
-{
-	glu = "hello there";
-}
-	ModelAndView mvc = new ModelAndView("home");
-	 mvc.addObject("Greetings",glu);
-	return mvc;
-
-	
-}*/
-
 }

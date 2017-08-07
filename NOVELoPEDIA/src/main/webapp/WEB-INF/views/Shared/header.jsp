@@ -45,8 +45,8 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active" style="font-size: 20px"><a href="#">Home</a></li>
-				<li><a href="#" style="font-size: 20px">Product</a></li>
+				<li id = "home" style="font-size: 20px"><a href="${contextRoot}/home">Home</a></li>
+				<li id ="product"><a href="#" style="font-size: 20px">Product</a></li>
 				<!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -62,8 +62,8 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<!--<li><a href="${pageContext.request.contextPath}/adding" style="font-size: 20px">Admin</a></li>  -->
-				<li><a href="${pageContext.request.contextPath}/goTologin" style="font-size: 20px" >Log In</a></li>
-				<li><a href="${pageContext.request.contextPath}/register" style="font-size: 20px">Sign in</a></li>
+				<li><a href="${contextRoot}/goTologin" style="font-size: 20px" >Log In</a></li>
+				<li><a href="${contextRoot}/register" style="font-size: 20px">Sign in</a></li>
 			</ul>
 		</div>
 	</div>
