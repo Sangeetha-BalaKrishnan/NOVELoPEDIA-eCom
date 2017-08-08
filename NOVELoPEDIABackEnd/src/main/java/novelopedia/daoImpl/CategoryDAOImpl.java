@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import novelopedia.dao.CategoryDAO;
 import novelopedia.dto.Category;
 
-@Repository("CategoryDAO")
+@Repository("categoryDAO")
 public class CategoryDAOImpl implements CategoryDAO {
 
 	private static List<Category> categories = new ArrayList<>();
@@ -47,6 +47,17 @@ public class CategoryDAOImpl implements CategoryDAO {
 	public List<Category> list() {
 		
 		return categories;
+	}
+	@Override
+	public Category get(int id) {
+		
+		//Ehanced For loop
+		for(Category cat:categories)
+		{
+			if(cat.getId() == id)
+				return cat;
+		}
+		return null;
 	}
 
 }

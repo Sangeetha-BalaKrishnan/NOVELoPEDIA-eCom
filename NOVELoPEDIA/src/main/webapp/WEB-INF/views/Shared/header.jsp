@@ -6,7 +6,7 @@
 <spring:url var="fonts" value="/resources/fonts" />
 <spring:url var="images" value="/resources/images" />
 <spring:url var="js" value="/resources/js" />
-<c:set var="contextRoot" value="${pageContext.request.contextPath }" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +34,9 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a href="#"> <img src="${images}/Logo.png" alt="NOVELoPEDIA" 	style="color: grey; height: 50px; width: 50%">
-				</a>
+				<img src="${images}/Logo.png" alt="NOVELoPEDIA"
+					style="color: grey; height: 50%; width: 50%">
+
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,16 +45,8 @@
 				<ul class="nav navbar-nav">
 					<li id="home" style="font-size: 20px"><a
 						href="${contextRoot}/home">Home</a></li>
-					<li class="dropdown" style="font-size: 20px"><a href="product"
-						class="dropdown-toggle" data-toggle="dropdown" role="button"
-						aria-haspopup="true" aria-expanded="false">Product<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<c:forEach items="${categories}" var="category">
-								<li><a href="#">${category.name}</a></li>
-							</c:forEach>
-
-						</ul></li>
+					<li id="Product" style="font-size: 20px"><a
+						href="${contextRoot}/show/all/products">Product</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li><a href="${pageContext.request.contextPath}/adding" style="font-size: 20px">Admin</a></li>  -->

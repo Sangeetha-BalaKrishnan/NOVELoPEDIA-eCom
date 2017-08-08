@@ -1,14 +1,18 @@
 $(function() {
 	// Active Menu
 	switch (menu) {
+	case 'home':
+		$('#home').addClass('active');
+		break;
 	case 'About Us':
 		$('#About').addClass('active');
 		break;
-	case 'Product':
-	 $('#Product').addClass('active');
-	 break;
+	case 'All Products':
+		$('#Product').addClass('active');
+		break;
 	default:
-		$('#home').addClass('active');
+		$('#Product').addClass('active');
+		$('#a_' + menu).addClass('active');
 		break;
 	}
 
