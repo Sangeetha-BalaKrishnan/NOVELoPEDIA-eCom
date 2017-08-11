@@ -14,7 +14,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages = { "eComProject.NOVELoPEDIABackEnd" })
+@ComponentScan(basePackages = { "novelopedia.dto" })
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -42,10 +42,12 @@ public class HibernateConfig {
 	// SessionFactory Bean
 	@Bean
 	public SessionFactory getSessionFactory(DataSource dataSource) {
+		
+		
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("novelopedia.dao");
+		builder.scanPackages("novelopedia.dto");
 
 		return builder.buildSessionFactory();
 

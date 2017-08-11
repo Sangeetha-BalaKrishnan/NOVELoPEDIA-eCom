@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import novelopedia.dao.CategoryDAO;
@@ -18,7 +17,7 @@ public class CategoryTestCase {
 	
 	private static CategoryDAO categoryDAO;
 	
-	@Autowired
+	
 	private  Category category;
 	
 	
@@ -26,8 +25,9 @@ public class CategoryTestCase {
 	@BeforeClass
 	public static void init(){
 		context = new AnnotationConfigApplicationContext();
-		context.scan("novelopedia.dao");
+		context.scan("novelopedia");
 		context.refresh();
+		
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
