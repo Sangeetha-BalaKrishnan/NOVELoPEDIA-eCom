@@ -39,8 +39,8 @@ public class CategoryTestCase {
 		
 		category = new Category();
 		
-		category.setName("Telev");
-		category.setDescription("This is some discription");
+		category.setName("Lap");
+		category.setDescription("This is some discription_1");
 		category.setImageURL("cat_1.png");
 		
 		assertEquals("Added Category",true,categoryDAO.add(category));
