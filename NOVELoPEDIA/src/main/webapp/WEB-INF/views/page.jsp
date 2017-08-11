@@ -1,7 +1,7 @@
 <!-- Carousel -->
 		
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-sm-3">
 					<p class="lead">NOVELS</p>
 					<%@include file="./Shared/sidebar.jsp"%>
 				</div>

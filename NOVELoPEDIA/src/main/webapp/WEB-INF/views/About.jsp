@@ -1,11 +1,10 @@
-<jsp:include page="Shared/header.jsp" />
+<%@include file="./Shared/header.jsp"%>
 <div class="container">
 	<div class="row">
-	<h1>About Us</h1>
-	<hr/>
-	<p>This is an Novelopedia Website which contains all the novels ever available </p>
-	
-	
+		<h1>About Us</h1>
+		<hr />
+		<p>This is an Novelopedia Website which contains all the novels
+			ever available</p>
 	</div>
 </div>
-<jsp:include page="Shared/footer.jsp" />
+<%@include file="./Shared/footer.jsp"%>

@@ -9,7 +9,7 @@
 <spring:url var="js" value="/resources/js" />
 <c:set var="contextRoot" value="${pageContext.request.contextPath }" />
 <!DOCTYPE HTML>
-<html style="height: 100%">
+<html style="height:100%">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script
@@ -21,7 +21,7 @@
 <title>NOVELoPEDIA</title>
 <link rel="icon" type="image/png" href="${images}/title.PNG" />
 <script>
-	window.menu = ${val};
+	window.menu = '${Value}';
 </script>
 </head>
 <body style="height: 100%">
@@ -34,7 +34,6 @@
 			<c:if test="${userClickHome == true}">
 				<%@include file="page.jsp"%>
 			</c:if>
-
 
 			<!--======== List of Products ==========-->
 			<c:if

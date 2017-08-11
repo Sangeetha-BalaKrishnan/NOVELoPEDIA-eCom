@@ -12,13 +12,13 @@ import novelopedia.dto.Category;
 @Controller
 public class PageController {
 
-	@Autowired
+	@Autowired(required = true)
 	private CategoryDAO categoryDAO;
 
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 		ModelAndView mvc = new ModelAndView("home");
-		mvc.addObject("val", "home");
+		mvc.addObject("Value","home");
 		// passing the list of category
 		mvc.addObject("categories", categoryDAO.list());
 		mvc.addObject("userClickHome", true);
@@ -28,7 +28,7 @@ public class PageController {
 	@RequestMapping(value = "/About")
 	public ModelAndView about() {
 		ModelAndView mvc = new ModelAndView("About");
-		mvc.addObject("val", "About Us");
+		mvc.addObject("Value","About Us");
 		return mvc;
 	}
 
@@ -38,7 +38,7 @@ public class PageController {
 	@RequestMapping(value = "/show/all/products")
 	public ModelAndView showAllProducts() {
 		ModelAndView mvc = new ModelAndView("home");
-		mvc.addObject("val", "All Products");
+		mvc.addObject("Value","All Products");
 		// passing the list of category
 		mvc.addObject("categories", categoryDAO.list());
 		mvc.addObject("userClickAllProducts", true);
@@ -52,7 +52,7 @@ public class PageController {
 		// categrdoryDAO to fetch a single category
 		Category category = null;
 		category = categoryDAO.get(id);
-		mvc.addObject("val", category.getName());
+		mvc.addObject("Value",category.getName());
 
 		// passing the list of category
 		mvc.addObject("categories", categoryDAO.list());

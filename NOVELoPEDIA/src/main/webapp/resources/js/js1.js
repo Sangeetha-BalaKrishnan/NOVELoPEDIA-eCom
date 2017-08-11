@@ -1,19 +1,21 @@
 $(function() {
 	// Active Menu
+	/*document.write(menu);*/
 	switch (menu) {
+	/*case 'About Us':
+		$('#About').addClass('active');
+		break;*/
+	case 'All Products':
+		$('#product').addClass('active');
+		break;
+
 	case 'home':
 		$('#home').addClass('active');
 		break;
-	case 'About Us':
-		$('#About').addClass('active');
+	/*default:
+		$('#product').addClass('active');
+		$('#a_'+ menu).addClass('active');
 		break;
-	case 'All Products':
-		$('#Product').addClass('active');
-		break;
-	default:
-		$('#Product').addClass('active');
-		$('#a_' + menu).addClass('active');
-		break;
-	}
+	*/}
 
 })

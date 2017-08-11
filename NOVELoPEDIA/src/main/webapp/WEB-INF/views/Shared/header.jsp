@@ -6,7 +6,7 @@
 <spring:url var="fonts" value="/resources/fonts" />
 <spring:url var="images" value="/resources/images" />
 <spring:url var="js" value="/resources/js" />
-
+<c:set var="contextRoot" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +45,7 @@
 				<ul class="nav navbar-nav">
 					<li id="home" style="font-size: 20px"><a
 						href="${contextRoot}/home">Home</a></li>
-					<li id="Product" style="font-size: 20px"><a
+					<li id="product" style="font-size: 20px"><a
 						href="${contextRoot}/show/all/products">Product</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
