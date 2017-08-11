@@ -1,4 +1,4 @@
-package novelopedia.controller;
+package eComProject.NOVELoPEDIA.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import novelopedia.dao.CategoryDAO;
-import novelopedia.dto.Category;
+import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
+import eComProject.NOVELoPEDIABackEnd.dto.Category;
 
 @Controller
 public class PageController {
 
-	@Autowired(required = true)
+	@Autowired
 	private CategoryDAO categoryDAO;
 
 	@RequestMapping(value = { "/", "/home", "/index" })

@@ -1,11 +1,13 @@
-package novelopedia.dao;
+package eComProject.NOVELoPEDIABackEnd.dao;
 
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import novelopedia.dto.Category;
+import eComProject.NOVELoPEDIABackEnd.dto.Category;
+
+
 
 @Service
 public interface CategoryDAO {

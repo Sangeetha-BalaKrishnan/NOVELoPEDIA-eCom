@@ -1,4 +1,5 @@
-package novelopedia.test;
+package eComProject.NOVELoPEDIABackEnd.test;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,8 +7,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import novelopedia.dao.CategoryDAO;
-import novelopedia.dto.Category;
+import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
+import eComProject.NOVELoPEDIABackEnd.dto.Category;
+
 
 public class CategoryTestCase {
 
@@ -25,7 +27,7 @@ public class CategoryTestCase {
 	@BeforeClass
 	public static void init(){
 		context = new AnnotationConfigApplicationContext();
-		context.scan("novelopedia");
+		context.scan("eComProject.NOVELoPEDIABackEnd");
 		context.refresh();
 		
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");

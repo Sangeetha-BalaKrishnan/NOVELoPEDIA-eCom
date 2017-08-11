@@ -12,8 +12,8 @@
      
      ">
 
-	<context:component-scan base-package="novelopedia.controller" />
-	<context:component-scan base-package="novelopedia.daoImpl" />
+	<context:component-scan base-package="eComProject.NOVELoPEDIA.Controller" />
+	<context:component-scan base-package="eComProject.NOVELoPEDIABackEnd.daoImpl" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

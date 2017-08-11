@@ -1,4 +1,4 @@
-package novelopedia.daoImpl;
+package eComProject.NOVELoPEDIABackEnd.daoImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import novelopedia.dao.CategoryDAO;
-import novelopedia.dto.Category;
+import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
+import eComProject.NOVELoPEDIABackEnd.dto.Category;
+
 
 @Service
 @Repository("categoryDAO")
