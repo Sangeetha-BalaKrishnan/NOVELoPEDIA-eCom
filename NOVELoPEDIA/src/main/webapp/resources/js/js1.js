@@ -12,10 +12,11 @@ $(function() {
 	case 'home':
 		$('#home').addClass('active');
 		break;
-	/*default:
+	default:
+		if (menu == "home") break;
 		$('#product').addClass('active');
 		$('#a_'+ menu).addClass('active');
 		break;
-	*/}
+	}
 
 })

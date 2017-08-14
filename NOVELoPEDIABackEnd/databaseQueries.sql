@@ -8,3 +8,67 @@ CREATE TABLE category(
 	
 	CONSTRAINT pk_category_id PRIMARY KEY(id)
 );
+
+INSERT INTO category(name,description,image_url,is_active) VALUES('Romance','This is Romance Genre','Romance1.jpg',true);
+INSERT INTO category(name,description,image_url,is_active) VALUES('Fiction','This is Fiction Genre','Fiction1.jpg',true);
+INSERT INTO category(name,description,image_url,is_active) VALUES('Thriller','This is Thriller Genre','Thriller1.jpg',true);
+INSERT INTO category(name,description,image_url,is_active) VALUES('Horror','This is Horror Genre','Horror1.jpg',true);
+
+CREATE TABLE user_details(
+	id IDENTITY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	role VARCHAR(50),
+	enabled BOOLEAN,
+	password VARCHAR(50),
+	email VARCHAR(100),
+	contact_number VARCHAR(15),
+	
+	CONSTRAINT pk_user_id PRIMARY KEY(id),
+	
+);
+
+INSERT INTO user_details
+(first_name, last_name , role , enabled , password , email , contact_number)
+VALUES('Ram' , 'Prakash' , 'ADMIN' , true , 'admin' , 'ramPrackash.90@gmail.com' , '9015687452');
+
+INSERT INTO user_details
+(first_name, last_name , role , enabled , password , email , contact_number)
+VALUES('Aarthi' , 'karnan' , 'SUPPLIER' , true , '123654' , 'aarthikarnan23@gmail.com' , '8693287452');
+
+INSERT INTO user_details
+(first_name, last_name , role , enabled , password , email , contact_number)
+VALUES('Revathi' , 'Krishnan' , 'SUPPLIER' , true , '147852' , 'revathikrishnan90@gmail.com' , '9015682552');
+
+CREATE TABLE product(
+	id IDENTITY,
+	code VARCHAR(20),
+	name VARCHAR(50),
+	author VARCHAR(50),
+	description VARCHAR(250),
+	unit_price DECIMAL(10,2),
+	quantity INT,
+	is_active BOOLEAN,
+	category_id INT,
+	supplier_id INT ,
+	purchases INT DEFAULT 0,
+	views INT DEFAULT 0,
+	CONSTRAINT pk_product_id PRIMARY KEY(id),
+	CONSTRAINT fk_product_category_id FOREIGN KEY(category_id) REFERENCES category (id), 
+	CONSTRAINT fk_product_supplier_id FOREIGN KEY(supplier_id) REFERENCES user_details (id),
+);
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES ('PRDABC123A','Notebook','Nicholas Sparks','Duke reads the story of Allie and Noah, two lovers who were separated by fate, to Ms. Hamilton, an old woman who suffers from Alzheimers, on a daily basis out of his notebook.','197','5', true , '1' , '2');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRDABC124B','Harry Potter and the Order of Phenoix','J.K.Rowling','Harry Potter and the Order of the Phoenix is the fifth and antepenultimate novel in the Harry Potter series, written by J. K. Rowling.','949' , '10' , true , '2' , '3');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRDABC125C' , 'If Tomorrow Comes' ,'Sydney Sheldon', 'If Tomorrow Comes is a 1985 crime fiction novel by American author Sidney Sheldon. It is a story portraying an ordinary woman who is framed by the Mafia, her subsequent quest for vengeance towards them and her later life as a con artist.', '214' ,'12' ,true, '3' , '1');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRDABC126D' , 'Pride and Prejudice' , 'Jane Austen' ,'Pride and Prejudice is a romance novel by Jane Austen.' ,'120' ,'2' ,true,'1','1');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRDABC127E' , 'The Shinning' , 'Stephen King' ,'The Shining is a horror novel by American author Stephen King. Published in 1977.' ,'250' ,'1' ,true,'4','3');
