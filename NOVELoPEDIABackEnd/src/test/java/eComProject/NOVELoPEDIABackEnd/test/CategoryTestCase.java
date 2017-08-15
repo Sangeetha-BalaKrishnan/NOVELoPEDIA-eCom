@@ -84,6 +84,7 @@ public class CategoryTestCase {
 		category.setName("Romance");
 		category.setDescription("The Romance Genre");
 		category.setImageURL("Romance1.png");
+		
 		assertEquals("Added Category", true, categoryDAO.add(category));
 		
 		

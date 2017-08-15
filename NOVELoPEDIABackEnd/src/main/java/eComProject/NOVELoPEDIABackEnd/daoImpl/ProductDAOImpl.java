@@ -3,7 +3,6 @@ package eComProject.NOVELoPEDIABackEnd.daoImpl;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -62,6 +61,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	}
 
+	// Delete Product
 	@Override
 	public boolean delete(Product product) {
 
@@ -77,20 +77,34 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public List<Product> listActiveProducts() {
-
-		return null;
+		String selectActiveProducts ="FROM Product WHERE active = :active";
+		return sessionFactory
+				 .getCurrentSession()
+				          .createQuery(selectActiveProducts , Product.class)
+				          .setParameter("active",true)
+				          .getResultList();
 	}
 
 	@Override
 	public List<Product> listActiveProductsByCategory(int categoryId) {
-
-		return null;
+		String selectActiveProductsByCategory ="FROM Product WHERE active = :active AND categoryId = :categoryId";
+		return sessionFactory
+				 .getCurrentSession()
+				      .createQuery(selectActiveProductsByCategory , Product.class)
+				          .setParameter("active",true)
+				          .setParameter("categoryId", categoryId)
+				          	.getResultList();
 	}
 
 	@Override
 	public List<Product> getLatestActiveProducts(int count) {
-
-		return null;
-	}
+		return sessionFactory
+				 .getCurrentSession()
+				      .createQuery("FROM Product  WHERE active = :active ORDER BY id" , Product.class)
+				          .setParameter("active",true)
+				          		.setFirstResult(0)
+				          		.setMaxResults(count)
+				          			.getResultList();
+		}
 
 }
