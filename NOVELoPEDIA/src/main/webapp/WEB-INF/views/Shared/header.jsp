@@ -20,7 +20,9 @@
 <script type="text/javascript" src="${js}/bootstrap.min.js"></script>
 <title>NOVELoPEDIA</title>
 <link rel="icon" type="image/png" href="${images}/title.PNG" />
-
+<script>
+	window.menu = '${Value}';
+</script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">

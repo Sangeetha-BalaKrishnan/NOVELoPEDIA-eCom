@@ -39,9 +39,19 @@
 
 			</div>
 
+			<div class="row">
+				<div class="col-xs-12">
+					<table id="productListTable"
+						class="table table-striped table-borderd">
 
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Name</th>
+							</tr>
+					</table>
+				</div>
+			</div>
 		</div>
-
 	</div>
-
 </div>

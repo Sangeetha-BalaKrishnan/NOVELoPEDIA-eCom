@@ -1,5 +1,5 @@
 <!-- Carousel -->
-		
+		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
 					<p class="lead">NOVELS</p>
@@ -54,7 +54,7 @@
 
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
-						<img src="${images}/One.jpg" style="width: 500px; height: 500px;"
+						<img src="${images}/One.jpg" style="width: 300px; height: 350px;"
 							alt="Image Not Found">
 						<div class="caption">
 							<h4 class="pull-right">$24.99</h4>
@@ -82,7 +82,7 @@
 
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
-						<img src="${images}/Two.jpg" style="width: 500px; height: 500px;"
+						<img src="${images}/Two.jpg"  style="width: 300px; height: 350px;"
 							alt="Image Not Found">
 						<div class="caption">
 							<h4 class="pull-right">$64.99</h4>
@@ -108,7 +108,7 @@
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
 						<img src="${images}/Three.jpg"
-							style="width: 500px; height: 500px;" alt="Image Not Found">
+							 style="width: 300px; height: 350px;" alt="Image Not Found">
 						<div class="caption">
 							<h4 class="pull-right">$74.99</h4>
 							<h4>
@@ -130,4 +130,4 @@
 					</div>
 				</div>
 			</div>
-		
+		</div>

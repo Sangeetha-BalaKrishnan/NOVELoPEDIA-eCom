@@ -21,11 +21,9 @@
 
 <link href="${css}/css1.css" rel="stylesheet">
 <script>
-	window.menu = $
-	{
-		val
-	};
+window.menu = '${Value}';
 </script>
+
 </head>
 <body>
 	<div class="foot">

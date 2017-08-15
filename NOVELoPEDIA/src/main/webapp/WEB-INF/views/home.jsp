@@ -46,6 +46,9 @@
 		<jsp:include page="Shared/footer.jsp" />
 	</div>
 	<!-- JQuery -->
-	<script src="${js}/js1.js"></script>
+	<script src="${js}/JQuery.js"></script>
+	
+	<!-- Data Table Plugins -->
+	<script src="${js}/jquery.dataTables.js"></script>
 </body>
 </html>
