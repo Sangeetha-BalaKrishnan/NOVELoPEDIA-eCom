@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" href="${images}/title.PNG" />
 <script>
 	window.menu = '${Value}';
+	window.contextRoot = '${contextRoot}';
 </script>
 </head>
 <body>
