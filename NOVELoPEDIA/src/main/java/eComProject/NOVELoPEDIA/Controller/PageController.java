@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import eComProject.NOVELoPEDIA.exception.ProductNotFoundException;
 import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
 import eComProject.NOVELoPEDIABackEnd.dao.ProductDAO;
 import eComProject.NOVELoPEDIABackEnd.dto.Category;
@@ -80,12 +81,13 @@ public class PageController {
 	//Viewing Single Product
 	
 	@RequestMapping(value="/show/{id}/product")
-	public ModelAndView showSingleProduct(@PathVariable int id)
+	public ModelAndView showSingleProduct(@PathVariable int id)throws ProductNotFoundException
 	{
 		ModelAndView mvc = new ModelAndView("home");
 		
 		Product product = productDAO.get(id);
 		
+		if(product == null) throw new ProductNotFoundException();
 		//Update view Count
 		product.setViews(product.getViews()+1);
 		productDAO.update(product);

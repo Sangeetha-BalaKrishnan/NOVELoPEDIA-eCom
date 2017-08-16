@@ -60,7 +60,6 @@
 				</ul>
 			</div>
 		</div>
-		<!-- /.container-fluid -->
 	</nav>
 </body>
 </html>
