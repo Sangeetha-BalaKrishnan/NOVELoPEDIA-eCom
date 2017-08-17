@@ -36,7 +36,7 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="${contextRoot}/home"><font size="6px" color="white">Home</font></a>
+					<a class="navbar-brand" href="${contextRoot}/home" style="font-size: 25px">Home</a>
 				</div>
 			</div>
 		</nav>

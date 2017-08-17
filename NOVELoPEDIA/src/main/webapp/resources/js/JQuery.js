@@ -9,8 +9,8 @@ $(function() {
 		$('#product').addClass('active');
 		break;
 
-	case 'home':
-		$('#home').addClass('active');
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
 		break;
 	default:
 		if (menu == "home")

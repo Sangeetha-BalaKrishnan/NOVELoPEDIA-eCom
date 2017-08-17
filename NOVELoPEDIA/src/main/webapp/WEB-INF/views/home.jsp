@@ -4,7 +4,6 @@
 	pageEncoding="ISO-8859-1"%>
 
 <spring:url var="css" value="/resources/css" />
-<spring:url var="fonts" value="/resources/fonts" />
 <spring:url var="images" value="/resources/images" />
 <spring:url var="js" value="/resources/js" />
 <c:set var="contextRoot" value="${pageContext.request.contextPath }" />
@@ -20,7 +19,7 @@
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="${css}/css1.css" rel="stylesheet">
+<link href="${css}/MyCss.css" rel="stylesheet">
 
 <title>NOVELoPEDIA</title>
 
@@ -37,29 +36,45 @@
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> --%>
 
 <!-- Bootstrap DataTable CSS -->
-<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
-
+<link href="${css}/jquery.dataTables.min.css" rel="stylesheet">
+<%-- <link href="${css}/datatables.foundation.css" rel="stylesheet"> --%>
 </head>
 <body style="height: 100%">
-	<!--======= Header ======-->
+
 	<div class="wrapper">
+
+		<!-- Header -->
 		<%@include file="./Shared/header.jsp"%>
+
+
 		<div class="content">
 
-			<!--====== Carosule =======-->
+			<!-- Carosule -->
+
 			<c:if test="${userClickHome == true}">
 				<%@include file="page.jsp"%>
 			</c:if>
 
-			<!--======== List of Products ==========-->
+
+			<!-- List of Products -->
+
 			<c:if
 				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 
+
 			<!-- Loads when user clicks show products -->
+
 			<c:if test="${userClickShowProduct == true }">
 				<%@include file="singleProduct.jsp"%>
+			</c:if>
+
+
+			<!-- Loads when user clicks Manage products -->
+
+			<c:if test="${userClickManageProducts == true }">
+				<%@include file="manageProducts.jsp"%>
 			</c:if>
 
 		</div>
