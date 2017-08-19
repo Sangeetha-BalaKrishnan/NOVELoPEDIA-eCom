@@ -8,34 +8,31 @@
 	padding-bottom: 60px;
 }
 
-.foot {
-	position: absolute;
-	width: 100%;
-	bottom: 0%;
-	height: 60px;
-}
 
-//
-Custom datatabel
+
+/*Custom datatabel*/
 
 .dataTableImg {
 	width: 100px;
 	height: 100px;
 }
 
-//
-custom footer
+/* custom footer */
 .site-footer {
 	background-color: black;
 	color: white;
-	margin-top: 10px;
-	padding-top: 10px;
+	margin-top: 30px;
+	padding-top: 30px;
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	height: 60px;
 }
 
 .footer-nav {
 	text-align: right;
 	list-style: none;
-	margin-top: 10px;
+	
 }
 
 .footer-nav li {
@@ -48,6 +45,8 @@ a:hover {
 	text-decoration: none;
 }
 
-.help-block {
-	color: #ff0000;
+em{
+	color:Red;
+	size:14px;
+	
 }

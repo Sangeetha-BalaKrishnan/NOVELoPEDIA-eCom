@@ -2,8 +2,9 @@ $(function() {
 	// Active Menu
 	/* document.write(menu); */
 	switch (menu) {
-	/*
-	 * case 'About Us': $('#About').addClass('active'); break;
+	/* case 'About Us':
+		 $('#About').addClass('active');
+		 break;
 	 */
 	case 'All Products':
 		$('#product').addClass('active');
@@ -14,10 +15,12 @@ $(function() {
 		break;
 	default:
 		if (menu == "home")
+			$("#home").addClass("active");
 			break;
 		$('#product').addClass('active');
 		$('#a_' + menu).addClass('active');
 		break;
+		
 	}
 
 	// code for jquery dataTable
@@ -106,4 +109,19 @@ $(function() {
 
 	}
 
-})
+	
+	//Dismissing alert
+
+	var $alert = $('.alert');
+	
+	if($alert.length){
+		
+		setTimeout(function(){
+			
+			$alert.fadeOut('slow');
+			
+		}, 3000)
+		
+	}
+
+});
