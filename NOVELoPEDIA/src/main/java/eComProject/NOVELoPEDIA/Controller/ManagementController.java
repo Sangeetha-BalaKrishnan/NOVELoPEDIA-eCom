@@ -2,6 +2,7 @@ package eComProject.NOVELoPEDIA.Controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import eComProject.NOVELoPEDIA.util.fileUploadUtility;
 import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
 import eComProject.NOVELoPEDIABackEnd.dao.ProductDAO;
 import eComProject.NOVELoPEDIABackEnd.dto.Category;
@@ -60,7 +62,7 @@ public class ManagementController {
 	}
 	
 	@RequestMapping(value="/products" , method = RequestMethod.POST)
-	public String handleProductsubmission(@Valid @ModelAttribute("product") Product nProduct, BindingResult results, Model model){
+	public String handleProductsubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model , HttpServletRequest request){
 		
 		//Check if there are any errors
 		
@@ -72,11 +74,16 @@ public class ManagementController {
 			return "home";
 		}
 		
-		
-		logger.info(nProduct.toString());
+		logger.info(mProduct.toString());
 		
 		//create new product record
-		produtDAO.add(nProduct);
+		produtDAO.add(mProduct);
+		
+		
+		if(!mProduct.getFile().getOriginalFilename().equals("")){
+			fileUploadUtility.uploadFile(request, mProduct.getFile(), mProduct.getCode());
+			
+		}
 		
 		return "redirect:/manage/products?operation=product";
 	}

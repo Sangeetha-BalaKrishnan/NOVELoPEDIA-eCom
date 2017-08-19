@@ -21,12 +21,12 @@
 .site-footer {
 	background-color: black;
 	color: white;
-	margin-top: 30px;
-	padding-top: 30px;
+	margin-top: 10px;
+	padding-top: 10px;
 	position: absolute;
 	width: 100%;
 	bottom: 0%;
-	height: 60px;
+	height: 50px;
 }
 
 .footer-nav {
@@ -37,7 +37,7 @@
 
 .footer-nav li {
 	display: inline;
-	padding: 0px 10px;
+	Sangeetha-BalaKrishnan
 }
 
 a:hover {
@@ -48,5 +48,4 @@ a:hover {
 em{
 	color:Red;
 	size:14px;
-	
 }

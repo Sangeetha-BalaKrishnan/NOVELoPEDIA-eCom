@@ -1,12 +1,12 @@
 <footer class="site-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4" class="bottom-footer">
+			<div class="col-xs-4" class="bottom-footer">
 				<font size="5px" id="About"> <a
 					href="${pageContext.request.contextPath}/About" >About us</a>
 				</font>
 			</div>
-			<div class="col-md-8">
+			<div class="col-xs-8">
 				<ul class="footer-nav">
 
 					<li><a href="https://www.facebook.com/"> <i

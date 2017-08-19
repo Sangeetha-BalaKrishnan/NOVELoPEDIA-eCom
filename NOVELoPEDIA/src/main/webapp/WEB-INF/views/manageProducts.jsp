@@ -28,7 +28,8 @@
 
 					<!-- Form Elements -->
 					<f:form class="form-horizontal" modelAttribute="product"
-						action="${contextRoot}/manage/products" method="POST">
+						action="${contextRoot}/manage/products" method="POST"
+						enctype="multipart/form-data">
 
 						<div class="form-group">
 							<label class="control-label col-md-4" for="name">Enter
@@ -81,6 +82,15 @@
 							<div class="col-md-8">
 								<f:input type="text" path="quantity" id="quantity"
 									placeholder="Quantity Availaable" class="form-control" />
+							</div>
+						</div>
+
+						<!-- File Image Upload -->
+						<div class="form-group">
+							<label class="control-label col-md-4" for="file">Select
+								an Image:</label>
+							<div class="col-md-8">
+								<f:input type="file" path="file" id="file" class="form-control" />
 							</div>
 						</div>
 
