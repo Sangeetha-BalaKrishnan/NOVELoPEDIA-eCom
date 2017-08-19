@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import eComProject.NOVELoPEDIA.util.fileUploadUtility;
+import eComProject.NOVELoPEDIA.validator.ProductValidator;
 import eComProject.NOVELoPEDIABackEnd.dao.CategoryDAO;
 import eComProject.NOVELoPEDIABackEnd.dao.ProductDAO;
 import eComProject.NOVELoPEDIABackEnd.dto.Category;
@@ -63,6 +64,11 @@ public class ManagementController {
 	
 	@RequestMapping(value="/products" , method = RequestMethod.POST)
 	public String handleProductsubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model , HttpServletRequest request){
+		
+		
+		new ProductValidator().validate(mProduct, results);
+		
+		
 		
 		//Check if there are any errors
 		

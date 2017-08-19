@@ -1,5 +1,10 @@
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-
+<style>
+.help-block {
+	color: Red;
+	size: 14px;
+}
+</style>
 <div class="container">
 	<div class="row">
 
@@ -91,6 +96,7 @@
 								an Image:</label>
 							<div class="col-md-8">
 								<f:input type="file" path="file" id="file" class="form-control" />
+								<f:errors path="file" cssClass="help-block" element="em"/>
 							</div>
 						</div>
 
