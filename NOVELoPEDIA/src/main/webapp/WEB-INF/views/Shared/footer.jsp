@@ -1,3 +1,32 @@
+<style>
+.site-footer {
+	background-color: black;
+	text-color: White;
+	margin-top: 10px;
+	padding-top: 10px;
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	height: 50px;
+}
+
+.footer-nav {
+	text-align: right;
+	list-style: none;
+	
+}
+
+.footer-nav li {
+	display: inline;
+	padding:0px 10px;
+}
+
+a:hover {
+	color: White;
+	text-decoration: none;
+}
+
+</style>
 <footer class="site-footer">
 	<div class="container">
 		<div class="row">

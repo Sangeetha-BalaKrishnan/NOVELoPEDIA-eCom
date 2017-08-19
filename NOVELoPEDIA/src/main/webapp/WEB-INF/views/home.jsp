@@ -106,6 +106,8 @@
 	<!-- DataTable Bootstrap JS -->
 	<script src="${js}/dataTables.bootstrap.js"></script>
 
+<!-- Bootbox -->
+<script src="${js}/bootbox.min.js"></script>
 
 	<!--  -->
 
