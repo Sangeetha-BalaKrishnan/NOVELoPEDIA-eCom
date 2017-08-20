@@ -291,23 +291,28 @@ if ($adminProductsTable.length) {
 													size : 'medium',
 													tite : 'Product Activation & Deactivation',
 													message : dMsg,
-													callback : function(
-															confirmed) {
+													callback : function(confirmed) {
 
 														if (confirmed) {
-
 															console.log(value);
-															bootbox
-																	.alert({
-																		size : 'medium',
-																		title : 'Information',
-																		message : 'You are going to perform operation on product '
-																				+ value
-																	});
+															
+															var activationUrl = window.contextRoot
+																	+ '/manage/product/'
+																	+ value
+																	+ '/activation';
+															
+															$.post(activationUrl,function(data){
+																
+																bootbox.alert({
+																	size : 'medium',
+																	title : 'Information',
+																	message : data
+																});
+														
+															});
+														
 														} else {
-															checkbox.prop(
-																	'checked',
-																	!checked);
+															checkbox.prop(	'checked',!checked);
 														}
 													}
 
