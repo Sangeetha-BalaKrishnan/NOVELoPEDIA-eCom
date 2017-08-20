@@ -153,8 +153,9 @@
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th>&#160</th>
+							<th>&#160;</th>
 							<th>Name</th>
+							<th>Author</th>
 							<th>Quantity</th>
 							<th>Unit Price</th>
 							<th>Active</th>
@@ -162,57 +163,14 @@
 						</tr>
 					</thead>
 
-					<tbody>
-						<tr>
 
-							<td>4</td>
-							<td><img class="adminDataTableImg"
-								src="${contextRoot}/resources/images/PRDABC126D.jpg"
-								alt="Pride and Prejudice" /></td>
-							<td>Pride and Prejudice</td>
-							<td>2</td>
-							<td>&#8377; 120.0/</td>
-							<td>
-								<!-- Toggle Switch --> <label class="switch"> <input
-									type="checkbox" checked="checked" value="4" />
-									<div class="slider"></div>
-
-							</label>
-							</td>
-							<td><a href="${contextRoot}/manage/4/product"
-								class="btn btn-warning"> <span
-									class="glyphicon glyphicon-pencil"></span>
-							</a></td>
-						</tr>
-						<tr>
-
-							<td>4</td>
-							<td><img class="adminDataTableImg"
-								src="${contextRoot}/resources/images/PRDABC126D.jpg"
-								alt="Pride and Prejudice" /></td>
-							<td>Pride and Prejudice</td>
-							<td>2</td>
-							<td>&#8377; 120.0/</td>
-							<td>
-								<!-- Toggle Switch --> <label class="switch"> <input
-									type="checkbox"  value="4" />
-									<div class="slider"></div>
-
-							</label>
-							</td>
-							<td><a href="${contextRoot}/manage/4/product"
-								class="btn btn-warning"> <span
-									class="glyphicon glyphicon-pencil"></span>
-							</a></td>
-						</tr>
-
-					</tbody>
 
 					<tfoot>
 						<tr>
 							<th>Id</th>
-							<th>&#160</th>
+							<th>&#160;</th>
 							<th>Name</th>
+							<th>Author</th>
 							<th>Quantity</th>
 							<th>Unit Price</th>
 							<th>Active</th>
