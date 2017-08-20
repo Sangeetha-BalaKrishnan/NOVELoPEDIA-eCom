@@ -1,5 +1,8 @@
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <style>
+.help-block{
+color:red;
+}
 </style>
 <div class="container">
 	<div class="row">
@@ -210,7 +213,7 @@
 				</div>
 				<div class="modal-body">
 					<!-- Category Form -->
-					<f:form modelAttribute="category"
+					<f:form id="categoryForm" modelAttribute="category"
 						action="${contextRoot}/manage/category" method="POST"
 						class="form-horizontal">
 

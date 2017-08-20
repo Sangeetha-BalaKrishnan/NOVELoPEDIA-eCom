@@ -262,7 +262,8 @@ if ($adminProductsTable.length) {
 
 								var str = ' ';
 
-								str += '<a href="'+window.contextRoot+'/manage/' + data
+								str += '<a href="' + window.contextRoot
+										+ '/manage/' + data
 										+ '/product"	class="btn btn-warning">';
 								str += '<span 	class="glyphicon glyphicon-pencil"></span>	</a>';
 
@@ -291,28 +292,36 @@ if ($adminProductsTable.length) {
 													size : 'medium',
 													tite : 'Product Activation & Deactivation',
 													message : dMsg,
-													callback : function(confirmed) {
+													callback : function(
+															confirmed) {
 
 														if (confirmed) {
 															console.log(value);
-															
+
 															var activationUrl = window.contextRoot
 																	+ '/manage/product/'
 																	+ value
 																	+ '/activation';
-															
-															$.post(activationUrl,function(data){
-																
-																bootbox.alert({
-																	size : 'medium',
-																	title : 'Information',
-																	message : data
-																});
-														
-															});
-														
+
+															$
+																	.post(
+																			activationUrl,
+																			function(
+																					data) {
+
+																				bootbox
+																						.alert({
+																							size : 'medium',
+																							title : 'Information',
+																							message : data
+																						});
+
+																			});
+
 														} else {
-															checkbox.prop(	'checked',!checked);
+															checkbox.prop(
+																	'checked',
+																	!checked);
 														}
 													}
 
@@ -325,4 +334,58 @@ if ($adminProductsTable.length) {
 }
 
 // -------------------------------------------
+
+// validate code for category
+
+var $categoryForm = $('#categoryForm');
+
+if ($categoryForm.length) {
+
+	$categoryForm.validate({
+
+		rules : {
+
+			name : {
+
+				required : true,
+				minlength : 2
+			
+			},
+			
+			description : {
+				
+				required: true
+			
+			}
+			
+		},
+			
+			messages : {
+				
+				name: {
+					
+					required: 'Please add the category name!',
+					minlength :'The category name should not be less than 2 Characters'
+				},
+				
+				description: {
+					
+					required: 'Please add the description for the Category!'
+					
+				}
+		
+			},
+			errorElement: 'em',
+			errorPlacement: function(error, element){
+				//add the class of help-block
+				error.addClass('help-block');
+				//add the error element after the input element
+				error.insertAfter(element);
+			}
+	});
+
+}
+
+
+//------------------------------------------
 });

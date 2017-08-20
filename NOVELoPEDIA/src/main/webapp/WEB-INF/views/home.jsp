@@ -97,6 +97,11 @@
 	<!-- JQuery -->
 	<script src="${js}/JQuery.js"></script>
 
+
+	<!-- JQuery validator -->
+	<script src="${js}/jquery.validate.js"></script>
+	
+	
 	<%-- 	<!-- Bootstrap Core JS -->
 	<script src="${js}/bootstrap.min.js"></script>
  --%>
