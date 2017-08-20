@@ -13,6 +13,8 @@ INSERT INTO category(name,description,image_url,is_active) VALUES('Romance','Thi
 INSERT INTO category(name,description,image_url,is_active) VALUES('Fiction','This is Fiction Genre','Fiction1.jpg',true);
 INSERT INTO category(name,description,image_url,is_active) VALUES('Thriller','This is Thriller Genre','Thriller1.jpg',true);
 INSERT INTO category(name,description,image_url,is_active) VALUES('Horror','This is Horror Genre','Horror1.jpg',true);
+INSERT INTO category(name,description,image_url,is_active) VALUES('Science Fiction.','Science fiction is fiction that imagines possible alternatives to reality. It is reality + "What-if." For example: What if the world ended? What if there were life on other planets? The imaginary part of science fiction is based on known scientific facts.','sfic.jpg',true);
+INSERT INTO category(name,description,image_url,is_active) VALUES('Realistic',' Realistic fiction is a genre consisting of stories that could have actually occurred to people or animals in a believable setting. These stories resemble real life, and fictional characters within these stories react similarly to real people. ','realistic1.jpg',true);
 
 CREATE TABLE user_details(
 	id IDENTITY,
@@ -72,3 +74,9 @@ VALUES('PRDABC126D' , 'Pride and Prejudice' , 'Jane Austen' ,'Pride and Prejudic
 
 INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
 VALUES('PRDABC127E' , 'The Shinning' , 'Stephen King' ,'The Shining is a horror novel by American author Stephen King. Published in 1977.' ,'250' ,'1' ,true,'4','3');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRDB741C7C0C6' , 'The Hunger Games: Catching Fire' , 'Suzanne Collins' ,'Katniss is advised by President Snow to participate in a special edition of the Hunger Games that will feature all its previous winners in order to eliminate her, due to her influential nature.' ,'1165.00' ,'0' ,true,'2','2');
+
+INSERT INTO product(code , name, author, description, unit_price, quantity, is_active , category_id , supplier_id )
+VALUES('PRD4CCB759DC8' , 'The Girl of my Dreams' , 'We are in the car. She’s looking at me. I can see the love in her eyes for me. Then a huge crash. She’s flung out of the window. I’m thrown out too. A pool of blood. Her eyes are still on me... but now it’s a death stare. I am Daman and I wake up to this nightmare. Every. Single. Day.' ,'129.00' ,'5' ,true,'1','1');
