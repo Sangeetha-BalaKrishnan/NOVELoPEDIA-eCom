@@ -46,7 +46,7 @@
 
 							<h4>${registerModel.billing.addressLineOne}</h4>
 							<h4>${registerModel.billing.addressLineTwo}</h4>
-							<h4>${registerModel.billing.city}  ${registerModel.billing.state}</h4>
+							<h5>${registerModel.billing.city}  ${registerModel.billing.state}</h5>
 							<h5>${registerModel.billing.country}   ${registerModel.billing.postalCode}</h5>
 							
 						</div>

@@ -1,5 +1,11 @@
+
 <%@include file="../shared/flows-header.jsp"%>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<style>
+.help-block{
+color:red;
+}
+</style>
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8">
@@ -20,6 +26,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="firstName" id="firstName"
 									placeholder="First Name" class="form-control" />
+								<f:errors path="firstName" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -29,6 +36,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="lastName" id="lastName"
 									placeholder="Last Name" class="form-control" />
+								<f:errors path="lastName" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -38,6 +46,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="email" id="email"
 									placeholder="Email Id" class="form-control" />
+								<f:errors path="email" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -47,6 +56,8 @@
 							<div class="col-md-8">
 								<f:input type="text" path="contactNumber" id="contactNumber"
 									placeholder="XXXXXXXX" maxlength="10" class="form-control" />
+								<f:errors path="contactNumber" cssClass="help-block"
+									element="em" />
 							</div>
 						</div>
 
@@ -55,9 +66,20 @@
 							<div class="col-md-8">
 								<f:input type="password" path="password" id="password"
 									class="form-control" />
+								<f:errors path="password" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
+						<div class="form-group">
+							<label class="control-label col-md-4" for="password">Confirm Password</label>
+							<div class="col-md-8">
+								<f:input type="password" path="confirmPassword" id="confirmPassword"
+									class="form-control" />
+								<f:errors path="confirmPassword" cssClass="help-block" element="em" />
+							</div>
+						</div>
+						
+						
 						<div class="form-group">
 							<label class="control-label col-md-4">Select Role</label>
 							<div class="col-md-8">

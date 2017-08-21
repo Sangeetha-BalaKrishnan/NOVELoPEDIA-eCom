@@ -1,5 +1,12 @@
+
 <%@include file="../shared/flows-header.jsp"%>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<style>
+.help-block{
+color:red;
+}
+</style>
+
 <div class="container">
 
 	<div class="row">
@@ -20,6 +27,8 @@
 							<div class="col-md-8">
 								<f:input type="text" path="addressLineOne" id="addressLineOne"
 									placeholder="Enter Address Line One" class="form-control" />
+								<f:errors path="addressLineOne" cssClass="help-block"
+									element="em" />
 							</div>
 						</div>
 
@@ -29,6 +38,8 @@
 							<div class="col-md-8">
 								<f:input type="text" path="addressLineTwo" id="addressLineTwo"
 									placeholder="Enter Address Line Two" class="form-control" />
+								<f:errors path="addressLineTwo" cssClass="help-block"
+									element="em" />
 							</div>
 						</div>
 
@@ -38,6 +49,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="city" id="city"
 									placeholder="Enter  city Name" class="form-control" />
+								<f:errors path="city" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -47,6 +59,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="state" id="state"
 									placeholder="Enter state Name" class="form-control" />
+								<f:errors path="state" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -55,6 +68,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="country" id="country"
 									placeholder="Enter Country Name" class="form-control" />
+								<f:errors path="country" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -64,6 +78,7 @@
 							<div class="col-md-8">
 								<f:input type="text" path="postalCode" id="postalCode"
 									placeholder="XXXXX" class="form-control" />
+								<f:errors path="postalCode" cssClass="help-block" element="em" />
 							</div>
 						</div>
 
@@ -84,7 +99,7 @@
 									name="_eventId_confirm">
 
 
-									
+
 									Next-Confirm<span class="glyphicon glyphicon-chevron-right"></span>
 
 

@@ -10,6 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name = "user_detail")
@@ -27,15 +34,40 @@ public class User implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(name = "first_name")
+	@NotBlank(message ="First Name is Required !")
 	private String firstName;
 	@Column(name = "last_name")
+	@NotBlank(message ="Please Enter the last name!")
 	private String lastName;
+	
+	@NotNull
+	@Email
 	private String email;
+	
 	@Column(name = "contact_number")
+	@Pattern(regexp="(^$|[0-9]{10})" , message ="The length should be 10 numbers")
 	private String contactNumber;
+	
 	private String role;
+	
+	@NotBlank(message ="Enter the Password !")
+	@Size(min = 6 ,max =50 , message ="The minimum length of the password should be 6")
 	private String password;
+
 	private boolean enabled =true;
+
+	//Confirm password transient field
+	@Transient
+	private String confirmPassword;
+	
+	
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
 
 	@OneToOne(mappedBy = "user" , cascade = CascadeType.ALL)
 	private Cart cart;
