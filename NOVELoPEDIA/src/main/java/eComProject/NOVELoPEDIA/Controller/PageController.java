@@ -100,6 +100,13 @@ public class PageController {
 		return mvc;
 	}
 	
-	
+/*Having similar mapping*/
+	@RequestMapping(value = "/register")
+	public ModelAndView register() {
+		ModelAndView mvc = new ModelAndView("home");
+		mvc.addObject("Value","About Us");
+		return mvc;
+	}
+
 	
 }

@@ -34,10 +34,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="${pageContext.request.contextPath}/adding" style="font-size: 20px">Admin</a></li>  -->
 
-				<li><a href="${contextRoot}/goTologin" style="font-size: 20px">Log
-						In</a></li>
-				<li><a href="${contextRoot}/register" style="font-size: 20px">Sign
-						in</a></li>
+				<li><a href="${contextRoot}/Login" style="font-size: 20px">LogIn</a></li>
+				<li><a href="${contextRoot}/register" style="font-size: 20px">SignUp</a></li>
 
 			</ul>
 
