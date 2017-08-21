@@ -24,15 +24,14 @@ public class Address implements Serializable{
 	private int id;
 	
 	//------------------
-	@ManyToOne
-	private User user;
-	
-	
-	public User getUser() {
-		return user;
+	@Column(name = "user_id")
+	private int userId;
+
+	public int getUserId() {
+		return userId;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	@Column(name = "address_line_one")
@@ -106,7 +105,7 @@ public class Address implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Address [id=" + id + ", user=" + user + ", addressLineOne=" + addressLineOne + ", addressLineTwo="
+		return "Address [id=" + id + ", user=" + userId + ", addressLineOne=" + addressLineOne + ", addressLineTwo="
 				+ addressLineTwo + ", city=" + city + ", state=" + state + ", country=" + country + ", postalCode="
 				+ postalCode + ", shipping=" + shipping + ", billing=" + billing + "]";
 	}

@@ -14,6 +14,7 @@
 						<div class="text-center">
 
 							<h4>${registerModel.user.firstName}
+								
 								${registerModel.user.lastName}</h4>
 
 							<h5>Email: ${registerModel.user.email}</h5>
@@ -27,7 +28,7 @@
 					</div>
 					<div class="panel-footer">
 						<a href="${flowExecutionUrl}&_eventId_personal"
-							class="btn btn-primary">Edit</a>
+							class="btn btn-warning">Edit</a>
 
 					</div>
 				</div>
@@ -45,17 +46,16 @@
 
 							<h4>${registerModel.billing.addressLineOne}</h4>
 							<h4>${registerModel.billing.addressLineTwo}</h4>
-							<h4>${registerModel.billing.city}</h4>
-							<h4>${registerModel.billing.state}</h4>
-							<h4>${registerModel.billing.country}</h4>
-							<h4>${registerModel.billing.postalCode}</h4>
+							<h4>${registerModel.billing.city}  ${registerModel.billing.state}</h4>
+							<h5>${registerModel.billing.country}   ${registerModel.billing.postalCode}</h5>
+							
 						</div>
 
 
 					</div>
 					<div class="panel-footer">
 						<a href="${flowExecutionUrl}&_eventId_billing"
-							class="btn btn-primary">Billing</a>
+							class="btn btn-warning">Edit</a>
 					</div>
 				</div>
 			</div>
@@ -64,8 +64,8 @@
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="text-center">
 
-						<a href="${flowExecutionUrl}&_eventId_success"
-							class="btn btn-primary">Confirm</a>
+						<a href="${flowExecutionUrl}&_eventId_submit"
+							class="btn btn-warning">Confirm</a>
 
 
 					</div>
