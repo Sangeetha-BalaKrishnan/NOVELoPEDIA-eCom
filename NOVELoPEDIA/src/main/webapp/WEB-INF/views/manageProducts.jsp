@@ -248,8 +248,7 @@ color:red;
 				</div>
 			</div>
 		</div>
-
-
+</div>
 
 
 	</div>

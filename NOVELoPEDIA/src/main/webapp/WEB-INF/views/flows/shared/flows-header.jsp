@@ -55,3 +55,8 @@
 <%@include file="flows-navbar.jsp" %>
 		<!-- Page Content -->
 		
+<div class="content">
+<br/>
+<br/>
+<br/>
+<br/>

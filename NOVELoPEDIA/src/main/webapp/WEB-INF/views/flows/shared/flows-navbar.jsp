@@ -2,7 +2,7 @@
 			<div class="container">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="${flowExecutionUrl}&_eventId_home"
-						style="font-size: 20px">Home</a>
+						style="size: 25px">Home</a>
 				</div>
 			</div>
 		</nav>

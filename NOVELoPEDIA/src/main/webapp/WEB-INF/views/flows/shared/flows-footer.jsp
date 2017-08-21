@@ -1,3 +1,4 @@
+</div>
 <!--====== Footer  ==========-->
 		<jsp:include page="../../Shared/footer.jsp" />
 
