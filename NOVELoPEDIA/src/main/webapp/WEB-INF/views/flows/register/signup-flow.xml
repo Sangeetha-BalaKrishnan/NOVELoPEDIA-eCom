@@ -8,19 +8,29 @@
 	<var name="user" class="eComProject.NOVELoPEDIABackEnd.dto.User" />
 	<var name="billing" class="eComProject.NOVELoPEDIABackEnd.dto.Address" />
 	
+	<!-- Returning and adding inside the flow a register model instance-->
+	<on-start>
+		<evaluate expression="registerHandler.init()" result="flowScope.registerModel"/>
+	</on-start>
 	
 	
 	<!-- is the start state -->
 	<view-state id="personal" view="flows/register/singup-personal" model="user">
 		<transition on="billing" to="billing"/>
+		<on-exit>
+			<evaluate expression="registerHandler.addUser(flowScope.registerModel, user)" />
+		</on-exit>
 	</view-state>
 
 	<view-state id="billing" view="flows/register/signup-billing" model="billing">
 		<transition on="personal" to="personal"/>
 		<transition on="confirm" to="confirm"/>
+		<on-exit>
+			<evaluate expression="registerHandler.addBilling(flowScope.registerModel,billing)"></evaluate>
+		</on-exit>
 	</view-state>
 
-	<view-state id="confirm" view="flows/register/singup-confirm">
+	<view-state id="confirm" view="flows/register/singup-confirm" model="flowScope.registerModel">
 		<transition on="personal" to="personal"/>
 		<transition on="billing" to="billing"/>
 		<transition on="success" to="success"/>
