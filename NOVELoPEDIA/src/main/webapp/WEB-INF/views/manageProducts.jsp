@@ -1,8 +1,13 @@
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <style>
-.help-block{
-color:red;
+.help-block {
+	color: red;
 }
+
+.table-responsive {
+	overflow-x: inherit;
+}
+
 </style>
 <div class="container">
 	<div class="row">
@@ -158,43 +163,53 @@ color:red;
 
 		<div class="col-xs-12">
 
-			<div style="overflow: auto">
+			<div class="container-fluid">
 
-				<!-- Products table for admin -->
-				<table id="adminProductsTable"
-					class="table table-striped table-bordered">
-
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>&#160;</th>
-							<th>Name</th>
-							<th>Author</th>
-							<th>Quantity</th>
-							<th>Unit Price</th>
-							<th>Active</th>
-							<th>Edit</th>
-						</tr>
-					</thead>
+				<div class="table-responsive">
 
 
+					<!-- Products table for admin -->
+					<table id="adminProductsTable"
+						class="table table-striped table-bordered">
 
-					<tfoot>
-						<tr>
-							<th>Id</th>
-							<th>&#160;</th>
-							<th>Name</th>
-							<th>Author</th>
-							<th>Quantity</th>
-							<th>Unit Price</th>
-							<th>Active</th>
-							<th>Edit</th>
-						</tr>
-					</tfoot>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Author</th>
+								<th>Quantity</th>
+								<th>Unit Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
 
-				</table>
+
+
+						<tfoot>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Author</th>
+								<th>Quantity</th>
+								<th>Unit Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+							</tr>
+						</tfoot>
+
+					</table>
+
+
+				</div>
+
 
 			</div>
+
+
+
 
 		</div>
 
@@ -248,7 +263,7 @@ color:red;
 				</div>
 			</div>
 		</div>
-</div>
-
-
 	</div>
+
+
+</div>

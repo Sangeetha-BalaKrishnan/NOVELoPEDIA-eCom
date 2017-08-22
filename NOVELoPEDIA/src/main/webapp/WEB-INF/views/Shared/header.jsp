@@ -1,5 +1,5 @@
 <%@taglib prefix="security"
-	uri="http://www.springframework.org/security/tags"%>>
+	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <spring:url var="images" value="/resources/images" />
 <nav class="navbar navbar-inverse">
@@ -64,7 +64,7 @@
 
 							</security:authorize>
 
-							<li><a href="${contextRoot}/logout">Logout</a></li>
+							<li><a href="${contextRoot}/perform-logout">Logout</a></li>
 
 						</ul></li>
 
