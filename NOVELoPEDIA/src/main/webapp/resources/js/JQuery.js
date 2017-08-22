@@ -114,14 +114,29 @@ if ($table.length) {
 										+ data
 										+ '/product" class = "btn btn-primary"><span class="glyphicon glyphicon-eye-open"</span></a> &#160';
 
-								if (row.quantity < 1) {
+								if (row.quantity < 1) 
+								{
 									str += '<a href =" javascript:void(0)" class = "btn btn-success disabled"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
-								} else {
-									str += '<a href =" '
+								} 
+								else {
+									
+									if(userRole == 'ADMIN' ){
+										
+										str += '<a href =" '
+											+ window.contextRoot
+											+ '/manage/'+ data+ '/product" class = "btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+										
+									}
+									else{
+										
+										str += '<a href =" '
 											+ window.contextRoot
 											+ '/cart/add/'
 											+ data
 											+ '/product" class = "btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
+									}
+									
+									
 								}
 
 								return str;

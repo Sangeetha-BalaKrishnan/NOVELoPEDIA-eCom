@@ -69,7 +69,12 @@
 					<div class="row">
 						<div class="col-md-offset-2 col-md-8">
 
-							<div class="alert alert-danger">${message}</div>
+
+
+							<div class="alert alert-danger">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								${message}
+							</div>
 
 						</div>
 					</div>

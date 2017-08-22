@@ -3,6 +3,7 @@ package eComProject.NOVELoPEDIA.handler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import eComProject.NOVELoPEDIA.model.RegisterModel;
@@ -16,6 +17,9 @@ public class RegisterHandler {
 
 	@Autowired
 	private UserDAO userDAO;
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 
 	public RegisterModel init() {
 
@@ -47,12 +51,8 @@ public class RegisterHandler {
 		// check the uniquness of the email
 		if (userDAO.getByEmail(user.getEmail()) != null) {
 
-			er.addMessage(new MessageBuilder()
-					.error()
-					.source("email")
-					.defaultText("Email address is already used!")
-					.build()
-					);
+			er.addMessage(
+					new MessageBuilder().error().source("email").defaultText("Email address is already used!").build());
 
 			transitionValue = "failure";
 
@@ -74,6 +74,10 @@ public class RegisterHandler {
 			user.setCart(cart);
 
 		}
+
+		// encode the password
+		String value = passwordEncoder.encode(user.getPassword());
+		user.setPassword(value);
 
 		// Save the user
 

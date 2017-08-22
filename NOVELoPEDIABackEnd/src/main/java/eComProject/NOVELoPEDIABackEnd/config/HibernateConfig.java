@@ -42,8 +42,7 @@ public class HibernateConfig {
 	// SessionFactory Bean
 	@Bean
 	public SessionFactory getSessionFactory(DataSource dataSource) {
-		
-		
+
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 
 		builder.addProperties(getHibernateProperties());
@@ -65,7 +64,7 @@ public class HibernateConfig {
 		return properties;
 	}
 
-	//TransactionManager Bean
+	// TransactionManager Bean
 	@Bean
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
 
@@ -73,4 +72,5 @@ public class HibernateConfig {
 
 		return transactionManager;
 	}
+
 }
