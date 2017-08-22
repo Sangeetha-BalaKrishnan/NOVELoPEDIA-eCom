@@ -76,6 +76,7 @@
 			</c:if>
 
 
+
 			<!-- Loads when user clicks show products -->
 
 			<c:if test="${userClickShowProduct == true }">
@@ -85,9 +86,15 @@
 
 			<!-- Loads when user clicks Manage products -->
 
-			<c:if test="${userClickManageProducts == true }">
-				<%@include file="manageProducts.jsp"%>
+			<c:if test="${userClickShowCart == true }">
+				<%@include file="Cart.jsp"%>
 			</c:if>
+			
+			<c:if test="${userClickShowProduct == true }">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+
+			
 
 		</div>
 

@@ -103,3 +103,19 @@ VALUES('Ravi', 'Chandar', 'SUPPLIER', true , '$2a$06$wU8173e/8B7ex6q2WdjxZO7rpqN
 INSERT INTO user_detail
 (first_name , last_name , role , enabled , password ,email ,contact_number)
 VALUES('Bala', 'Krishnan' , 'SUPPLIER' ,true , '$2a$06$c.mJecfW4C77.u4NRnpgCOA1Diev1ULcyKbzDLesAC0dNroWlkdBW' ,'balakrishnan@gmail.com' , '9632587024');
+
+CREATE TABLE cart_line(
+
+	id IDENTITY,
+	cart_id int,
+	total DECIMAL(10,2),
+	product_id int,
+	product_count int,
+	buying_price decimal(10,2),
+	is_available boolean,
+	CONSTRAINT fk_cartline_cart_id FOREIGN KEY(cart_id) REFERENCES cart(id),
+	CONSTRAINT fk_cartline_product_id FOREIGN KEY(product_id) REFERENCES product(id),
+	CONSTRAINT pk_cartline_id PRIMARY KEY (id)
+	);
+
+

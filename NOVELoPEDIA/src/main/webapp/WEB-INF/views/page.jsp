@@ -61,10 +61,7 @@
 							<h4>
 								<a href="#">First Product</a>
 							</h4>
-							<p>
-								See more snippets like this online store item at <a
-									target="_blank" href="http://www.bootsnipp.com">Bootsnipp -
-									http://bootsnipp.com</a>.
+							<p> Jessica Rinaldi of the Boston Globe won the feature photography prize for her story ... A look back on prize winning ....
 							</p>
 						</div>
 						<div class="ratings">
@@ -89,8 +86,8 @@
 							<h4>
 								<a href="#">Second Product</a>
 							</h4>
-							<p>This is a short description. Lorem ipsum dolor sit amet,
-								consectetur adipiscing elit.</p>
+							<p>I would never give myself to him willingly or without a fight. ...
+							 I couldn't believe that this was the sort of thing that ever occurred in everyday life </p>
 						</div>
 						<div class="ratings">
 							<p class="pull-right">12 reviews</p>
@@ -114,8 +111,7 @@
 							<h4>
 								<a href="#">Third Product</a>
 							</h4>
-							<p>This is a short description. Lorem ipsum dolor sit amet,
-								consectetur adipiscing elit.</p>
+							<p>Gorgeous, fiercely intelligent, deeply honest, and incredibly entertaining.</p>
 						</div>
 						<div class="ratings">
 							<p class="pull-right">31 reviews</p>

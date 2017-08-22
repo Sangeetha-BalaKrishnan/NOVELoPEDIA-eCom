@@ -12,6 +12,10 @@ $(function() {
 	case 'Manage Products':
 		$('#manageProducts').addClass('active');
 		break;
+	case 'user cart':
+		$('#userCart').addClass('active');
+		break;
+	
 	default:
 		if (menu == "home")
 			$("#home").addClass("active");
