@@ -54,6 +54,11 @@ public class PageController {
 		return mvc;
 	}
 
+	@RequestMapping(value = "/checkout")
+	public ModelAndView checkOut() {
+		ModelAndView mvc = new ModelAndView("checkout");
+		return mvc;
+	}
 	/*
 	 * Methods to load the category products
 	 */

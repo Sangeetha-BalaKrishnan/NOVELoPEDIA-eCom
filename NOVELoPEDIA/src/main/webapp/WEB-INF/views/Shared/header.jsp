@@ -58,7 +58,8 @@
 										class="glyphicon glyphicon-shopping-cart"></span> <span
 										class="badge">${userModel.cart.cartLines}</span> -&#8377;
 										${userModel.cart.grandTotal}
-								</a></li>
+								</a>
+								</li>
 
 								<li class="divider" role="seperator"></li>
 

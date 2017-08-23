@@ -54,14 +54,16 @@
 
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
+					<a href="${contextRoot}/show/all/products">
 						<img src="${images}/One.jpg" style="width: 300px; height: 350px;"
 							alt="Image Not Found">
-						<div class="caption">
-							<h4 class="pull-right">$24.99</h4>
+							</a>
+						<div class="caption" style="height:200px;width:200px">
+							<h4 class="pull-right">&#8377; 124.99</h4>
 							<h4>
-								<a href="#">First Product</a>
+								<a href="${contextRoot}/show/all/products">People,Portraits<br/>&Photography</a>
 							</h4>
-							<p> Jessica Rinaldi of the Boston Globe won the feature photography prize for her story ... A look back on prize winning ....
+							<p> Jessica Rinaldi of the Boston Globe won the feature photography prize for her story ... A look back on prize winning .
 							</p>
 						</div>
 						<div class="ratings">
@@ -79,14 +81,16 @@
 
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
+					<a href="${contextRoot}/show/all/products">
 						<img src="${images}/Two.jpg"  style="width: 300px; height: 350px;"
 							alt="Image Not Found">
-						<div class="caption">
-							<h4 class="pull-right">$64.99</h4>
+							</a>
+						<div class="caption" style="height:200px;width:200px">
+							<h4 class="pull-right">&#8377; 164.99</h4>
 							<h4>
-								<a href="#">Second Product</a>
+								<a href="${contextRoot}/show/all/products"  hover="color:grey">Annabella Fights life</a>
 							</h4>
-							<p>I would never give myself to him willingly or without a fight. ...
+							<p>I would never give myself to him willingly or without a fight.
 							 I couldn't believe that this was the sort of thing that ever occurred in everyday life </p>
 						</div>
 						<div class="ratings">
@@ -104,12 +108,14 @@
 
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail">
+						<a href="${contextRoot}/show/all/products">
 						<img src="${images}/Three.jpg"
 							 style="width: 300px; height: 350px;" alt="Image Not Found">
-						<div class="caption">
-							<h4 class="pull-right">$74.99</h4>
+							 </a>
+						<div class="caption" style="height:200px;width:200px">
+							<h4 class="pull-right">&#8377; 174.99</h4>
 							<h4>
-								<a href="#">Third Product</a>
+								<a href="${contextRoot}/show/all/products">The Boy</a>
 							</h4>
 							<p>Gorgeous, fiercely intelligent, deeply honest, and incredibly entertaining.</p>
 						</div>
