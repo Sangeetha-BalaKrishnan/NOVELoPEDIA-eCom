@@ -42,11 +42,11 @@ if (token.length > 0 && header.length > 0) {
 
 // code for jquery dataTable
 
-var products = [ [ '1', 'abc', '23', '12' ], [ '2', 'abc', '23', '12' ],
+/*var products = [ [ '1', 'abc', '23', '12' ], [ '2', 'abc', '23', '12' ],
 		[ '3', 'abc', '23', '12' ], [ '15', 'abc', '23', '12' ],
 
 ];
-
+*/
 var $table = $('#productListTable');
 
 if ($table.length) {

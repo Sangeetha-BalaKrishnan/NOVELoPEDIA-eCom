@@ -119,9 +119,6 @@
 											data-target="#myCategoryModal" class="btn btn-info btn-xs">Add
 											Category</button>
 									</div>
-
-
-
 								</c:if>
 
 
